@@ -7,6 +7,6 @@ extern {
 
 #[wasm_bindgen]
 pub fn greet(name: &str) {
-    alert(&format!("Hello man, {}!", name));
+    alert(&format!("Rodando.., {}!", name));
 }
 

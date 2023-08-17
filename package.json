@@ -1,15 +1,19 @@
 {
-  "name": "hello-wasm",
+  "name": "wasm-exemplo",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/Julio-Freitas/wasm-exemple.git",
   "author": "julio.freitas <julio.freitas@solides.com.br>",
   "license": "MIT",
   "scripts": {
-    "build:lib": "wasm-pack build --target web",
-    "start": "http-server --port=9090 ./public"
+    "cargo": "cargo build --lib",
+    "build:wasm": "wasm-pack build --target web",
+    "server": "http-server ./ -p 9090",
+    "clean:pkg": "rm -rf pkg",
+    "start": "yarn clean:pkg && yarn build:wasm && yarn server"
   },
   "devDependencies": {
+    "browser-sync": "^2.29.3",
     "http-server": "^14.1.1"
   }
 }
