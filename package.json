@@ -1,0 +1,15 @@
+{
+  "name": "hello-wasm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Julio-Freitas/wasm-exemple.git",
+  "author": "julio.freitas <julio.freitas@solides.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "wasm-pack build --target web",
+    "start": "http-server --port=9090 ./public"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
