@@ -6,12 +6,14 @@ module.exports = {
     entry: './main.js',
     output: {
         path: path.resolve(__dirname, 'site'),
-        filename: 'main.js',
+      filename: 'main.js',
+
     },
     plugins: [
       new HtmlWebpackPlugin({
         hash: true,
-        template: './template.html'
+        template: './template.html',
+        inject: 'body'
         }),
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, "site")
